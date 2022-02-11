@@ -1,5 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
-const winningArray = [ 
+const winningCombo = [ 
     [0, 1, 2, 3], [41, 40, 39, 38],[7, 8, 9, 10], 
     [34, 33, 32, 31], [14, 15, 16, 17], [27, 26, 25, 24], 
     [21, 22, 23, 24], [20, 19, 18, 17], [28, 29, 30, 31], 
@@ -29,7 +29,7 @@ const winningArray = [
 /*---------------------------- Variables (state) ----------------------------*/
 let board, turn, winner
 /*------------------------ Cached Element References ------------------------*/
-let circles = document.querySelectorAll('cl')
+let circles = document.querySelectorAll('.cl')
 /*----------------------------- Event Listeners -----------------------------*/
 
 circles.forEach(function(circle){
@@ -47,7 +47,7 @@ function init(){
     board = [
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
-        null, null, null, null, null, null, null,
+        1, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null
@@ -61,19 +61,41 @@ function init(){
 }
 
 function render(){
-    board.forEach(function(square, index){
+    board.forEach(function(circle, index){
         let circleColor
     
         if(circle === 1){
             circleColor ='red'
-        }else if (square === -1){
+        }else if (circle === -1){
             circleColor = 'blue'
         }else if (circle === null){
             circleColor = 'white'
         }
-        circles[index].innerText = 
+        
+        circles[index].style.backgroundColor = circleColor
     })
 }
 
+function handleClick(e){
+    let index = e.target.id[e.target.id.length -1];
+    if(board[index] !== null){
+        return
+    }
+    if(winner !== null){
+        return
+    }
+    board[index] = turn
+    turn = turn * -1
+    getWinner()
+}
 
+function getWinner(){
+    render();
 
+    winningCombo.forEach(combo =>{
+        if(board[combo[0]] + board[combo[1]] + board[combo[2]] === -3){
+            winner = -1;
+            
+        }
+    })
+}
