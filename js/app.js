@@ -74,10 +74,10 @@ function render(){
         let circleColor
         
         if(circle === 1){
-            circleColor ='red'
+            circleColor ='rgb(228, 114, 114)'//red
             
         }else if (circle === -1){
-            circleColor = 'blue'
+            circleColor = 'rgb(228, 228, 78)'//yellow
             
         }else if (circle === null){
             circleColor = 'white'
@@ -91,14 +91,22 @@ function render(){
 
 function changeMessage(){
     if (winner === null) {
-        if (turn === 1) resultMessage.textContent = "Player Red Move"
-        if (turn === -1) resultMessage.textContent = "Player Blue Move"
+         
+        if (turn === 1) {
+            resultMessage.textContent = "Player Red Move"
+            resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
+        }
+           
+        if (turn === -1){
+             resultMessage.textContent = "Player Yellow Move"
+             resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
+            }
     }else if (winner === 'T'){
         resultMessage.textContent = 'Tie Game! "Reset Button To Play Again'
     } else if (winner === 1){
         resultMessage.textContent = 'Player Red Has Won the Game'
     }else if ( winner === -1){
-        resultMessage.textContent = 'Player Blue has Won the Game'
+        resultMessage.textContent = 'Player Yellow has Won the Game'
     }
 }
 
@@ -119,6 +127,8 @@ function handleClick(e){
     turn = turn * -1
     getWinner()
 }
+
+
 
 function getWinner(){
     render();

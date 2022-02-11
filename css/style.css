@@ -20,8 +20,9 @@ section.board{
     grid-template-columns: repeat(7, 10vmin);
     grid-gap: .5vmin;
     cursor: pointer;
-    background-color: rgb(93, 93, 201);
+    background-color: rgb(79, 79, 214);
     padding: 1.5%;
+    border: 3px solid rgb(70, 70, 73);
     
 }
 
@@ -39,4 +40,10 @@ button{
    bottom: 50px;
    background-color: #74ec78;
    font-size: 30px;
+}
+
+#turn{
+  color: white;
+  padding: 1%;
+  margin: 2%;
 }
