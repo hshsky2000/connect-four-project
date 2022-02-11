@@ -1,0 +1,44 @@
+https://wireframe.cc/mtB0b5
+
+pseudo code
+
+1. Define the variables turn, win, circles
+    -jquery all the elements in the DOM
+
+2. In constants have winning combo
+
+3. cached queryselectall circles, cached turn, reset button(hidden)
+
+4. create initialize function to initialize the variables
+    -42 circles nulls represent empty circles
+    -42 elements map to each circles.
+    -initialize whos turn to 1
+    -initialize winner variable to null
+
+5. create render function excute when the page loading
+    -loop over the circles array
+    -render whos turn
+    -render reset button
+    -winner is equel to T for tie
+
+6. create array function fill up row from the bottom.
+    
+7. define winning condition
+    -each array will contain 4 indexes fo the circle that make winner
+
+8. handleclick function obtain the index from an id assigned to the element in HTML
+    -if board has a value at the index, return immediately
+    -if winner is not null, return immediately
+    -change turn 1 to -1
+
+9. getwinner function
+    -loop the winning combo
+    -convert the total to an absolute value
+    -if total equals 4, we have a winner
+    -also check if there is tie
+    -OR return null
+
+
+
+
+
