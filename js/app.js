@@ -22,7 +22,8 @@ const winningCombo = [
     [26, 25, 24, 23], [29, 30, 31, 32], [33, 32, 31, 30], 
     [36, 37, 38, 39], [40, 39, 38, 37], [7, 14, 21, 28], 
     [8, 15, 22, 29], [9, 16, 23, 30], [10, 17, 24, 31], 
-    [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34] 
+    [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34],
+    [11, 17, 23, 29] 
     ]; 
 
 
@@ -118,11 +119,11 @@ function getWinner(){
     render();
 
     winningCombo.forEach(combo =>{
-        if(board[combo[0]] + board[combo[1]] + board[combo[2]] === -3){
+        if(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]] === -4){
             winner = -1;
             changeMessage();
         }
-        if(board[combo[0]] + board[combo[1]] + board[combo[2]] ===3){
+        if(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]] ===4){
             winner = 1;
             changeMessage();
         }
