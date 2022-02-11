@@ -14,6 +14,7 @@ section.board{
     grid-template-columns: repeat(7, 20vmin);
     grid-gap: 0vmin;
     cursor: pointer;
+    
 }
 
 div {
@@ -21,4 +22,5 @@ div {
     font-size: 13vmin;
     text-align: center;
     vertical-align: middle;
+    border-radius: 50%;
 }
