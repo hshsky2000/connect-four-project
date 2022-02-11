@@ -48,11 +48,13 @@ function init(){
     board = [
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
-        1, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null
+        
     ]
+    
 
     turn = 1
     winner = null
@@ -64,13 +66,16 @@ function init(){
 function render(){
     board.forEach(function(circle, index){
         let circleColor
-    
+        
         if(circle === 1){
             circleColor ='red'
+            
         }else if (circle === -1){
             circleColor = 'blue'
+            
         }else if (circle === null){
             circleColor = 'white'
+           
         }
         
         circles[index].style.backgroundColor = circleColor
@@ -96,7 +101,8 @@ function changeMessage(){
 
 
 function handleClick(e){
-    let index = e.target.id[e.target.id.length -1];
+    let index = e.target.id;
+    
     if(board[index] !== null){
         return
     }
