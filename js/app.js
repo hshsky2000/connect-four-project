@@ -30,6 +30,7 @@ const winningCombo = [
 let board, turn, winner
 /*------------------------ Cached Element References ------------------------*/
 let circles = document.querySelectorAll('.cl')
+let resultMessage = document.querySelector('#turn')
 /*----------------------------- Event Listeners -----------------------------*/
 
 circles.forEach(function(circle){
@@ -74,7 +75,25 @@ function render(){
         
         circles[index].style.backgroundColor = circleColor
     })
+    changeMessage()
 }
+
+function changeMessage(){
+    if (winner === null) {
+        if (turn === 1) resultMessage.textContent = "Player Red Move"
+        if (turn === -1) resultMessage.textContent = "Player Blue Move"
+    }else if (winner === 'T'){
+        resultMessage.textContent = 'Tie Game! "Reset Button To Play Again'
+    } else if (winner === 1){
+        resultMessage.textContent = 'Player Red Has Won the Game'
+    }else if ( winner === -1){
+        resultMessage.textContent = 'Player Blue has Won the Game'
+    }
+}
+
+
+
+
 
 function handleClick(e){
     let index = e.target.id[e.target.id.length -1];
@@ -95,7 +114,16 @@ function getWinner(){
     winningCombo.forEach(combo =>{
         if(board[combo[0]] + board[combo[1]] + board[combo[2]] === -3){
             winner = -1;
-            
+            changeMessage();
+        }
+        if(board[combo[0]] + board[combo[1]] + board[combo[2]] ===3){
+            winner = 1;
+            changeMessage();
         }
     })
+    let tieGame = board.some(numb => numb === null)
+    if (tieGame === false) {
+        winner = 'T'
+        changeMessage();
+    }
 }
