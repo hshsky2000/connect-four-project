@@ -105,8 +105,10 @@ function changeMessage(){
         resultMessage.textContent = 'Tie Game! "Reset Button To Play Again'
     } else if (winner === 1){
         resultMessage.textContent = 'Player Red Has Won the Game'
+        resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
     }else if ( winner === -1){
         resultMessage.textContent = 'Player Yellow has Won the Game'
+        resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
     }
 }
 
