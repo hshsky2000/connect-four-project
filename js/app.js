@@ -32,12 +32,17 @@ let board, turn, winner
 /*------------------------ Cached Element References ------------------------*/
 let circles = document.querySelectorAll('.cl')
 let resultMessage = document.querySelector('#turn')
+let newGame = document.querySelector('#reset')
 /*----------------------------- Event Listeners -----------------------------*/
 
 circles.forEach(function(circle){
     circle.addEventListener('click', function(e){
         handleClick(e)
     })
+})
+
+newGame.addEventListener('click', function(){
+    init()
 })
 
 
