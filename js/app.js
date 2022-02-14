@@ -28,7 +28,7 @@ const winningCombo = [
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, turn, winner
+let board, turn, winner, invalid
 /*------------------------ Cached Element References ------------------------*/
 let circles = document.querySelectorAll('.cl')
 let resultMessage = document.querySelector('#turn')
@@ -71,6 +71,8 @@ function init(){
 
 function render(){
     board.forEach(function(circle, index){
+
+        
         let circleColor
         
         if(circle === 1){
@@ -90,26 +92,31 @@ function render(){
 }
 
 //------------------gravity function---------------------------//
- for(let i= 0; i< circles.length ;i++){
+function gravity (){
+for(let i= 0; i< circles.length ;i++){
      circles[i].onclick = () => {
          if (circles[i + 7].classList.contains('taken')) {
              if (turn === 1) {
-                //  circles[i].classList.add("taken")
+                 circles[i].classList.add("taken")
                 //  circles[i].classList.add("player-one")
                 //  currentPlayer = -1
                 //  resultMessage.innerHTML = currentPlayer
              } else if (turn === -1){
-                // circles[i + 7].classList.add("taken")
+                circles[i].classList.add("taken")
                 // circles[i].classList.add("player-two")
                 // currentPlayer = 1
                 // resultMessage.innerHTML = currentPlayer
              }
-         }else alert('cant go here')
-         
-         changeMessage()
+         }else{
+            alert('cant go here')
+            invalid = true
+         } 
+         console.log(invalid)
+        
      }
  }
-
+}
+gravity();
 
 
 //---------------------end of gravity function--------------------------//
@@ -143,7 +150,8 @@ function changeMessage(){
 
 function handleClick(e){
     let index = e.target.id;
-    
+    gravity();
+    if (invalid === true) console.log('hello');
     if(board[index] !== null){
         return
     }
