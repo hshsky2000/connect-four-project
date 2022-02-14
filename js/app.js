@@ -28,7 +28,7 @@ const winningCombo = [
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, turn, winner, invalid
+let board, turn, winner
 /*------------------------ Cached Element References ------------------------*/
 let circles = document.querySelectorAll('.cl')
 let resultMessage = document.querySelector('#turn')
@@ -74,49 +74,49 @@ function render(){
 
         
         let circleColor
+        let slotClass
         
         if(circle === 1){
             circleColor ='rgb(228, 114, 114)'//red
+            slotClass = 'taken'
             
         }else if (circle === -1){
             circleColor = 'rgb(228, 228, 78)'//yellow
+            slotClass = 'taken'
             
         }else if (circle === null){
             circleColor = 'white'
+            slotClass = ''
            
         }
         
         circles[index].style.backgroundColor = circleColor
+        circles[index].classList = slotClass
     })
     changeMessage()
 }
 
 //------------------gravity function---------------------------//
-function gravity (){
-for(let i= 0; i< circles.length ;i++){
-     circles[i].onclick = () => {
-         if (circles[i + 7].classList.contains('taken')) {
-             if (turn === 1) {
-                 circles[i].classList.add("taken")
+//  for(let i= 0; i< circles.length ;i++){
+//      circles[i].onclick = () => {
+//          if (circles[i + 7].classList.contains('taken')) {
+//              if (turn === 1) {
+//                  circles[i].classList.add("taken")
                 //  circles[i].classList.add("player-one")
                 //  currentPlayer = -1
                 //  resultMessage.innerHTML = currentPlayer
-             } else if (turn === -1){
-                circles[i].classList.add("taken")
+//              } else if (turn === -1){
+                // circles[i].classList.add("taken")
                 // circles[i].classList.add("player-two")
                 // currentPlayer = 1
                 // resultMessage.innerHTML = currentPlayer
-             }
-         }else{
-            alert('cant go here')
-            invalid = true
-         } 
-         console.log(invalid)
+//              }
+//          }else alert('cant go here')
+         
         
-     }
- }
-}
-gravity();
+//      }
+//  }
+
 
 
 //---------------------end of gravity function--------------------------//
@@ -150,8 +150,9 @@ function changeMessage(){
 
 function handleClick(e){
     let index = e.target.id;
-    gravity();
-    if (invalid === true) console.log('hello');
+    
+ 
+
     if(board[index] !== null){
         return
     }
@@ -161,9 +162,8 @@ function handleClick(e){
     board[index] = turn
     turn = turn * -1
     getWinner()
+
 }
-
-
 
 function getWinner(){
     render();
