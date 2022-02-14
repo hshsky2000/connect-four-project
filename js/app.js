@@ -93,19 +93,19 @@ function render(){
  for(let i= 0; i< circles.length ;i++){
      circles[i].onclick = () => {
          if (circles[i + 7].classList.contains('taken')) {
-             if (currentPlayer == 1) {
+             if (currentPlayer === 1) {
                  circles[i].classList.add("taken")
                  circles[i].classList.add("player-one")
                  currentPlayer = -1
                  resultMessage.innerHTML = currentPlayer
-             } else if (currentPlayer == -1){
+             } else if (currentPlayer === -1){
                 circles[i].classList.add("taken")
                 circles[i].classList.add("player-two")
                 currentPlayer = 1
                 resultMessage.innerHTML = currentPlayer
              }
          }else alert('cant go here')
-         checkBoard()
+         changeMessage()
      }
  }
 
