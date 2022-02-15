@@ -55,8 +55,8 @@ circles.forEach(function(circle, i){
 })
 
 newGame.addEventListener('click', function(){
-    init()
-    confetti.clear();
+    init();
+    confetti.clear()
     
 })
 
@@ -64,6 +64,7 @@ newGame.addEventListener('click', function(){
 /*-------------------------------- Functions --------------------------------*/
 
 init();
+
 
 
 function init(){
