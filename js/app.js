@@ -47,9 +47,10 @@ sound.addEventListener('click', function(e){
 })
 /*----------------------------- Event Listeners -----------------------------*/
 
-circles.forEach(function(circle){
-    circle.addEventListener('click', function(e){
-        handleClick(e)
+circles.forEach(function(circle, i){
+    console.log(i)
+    circle.addEventListener('click', function(e, i){
+        handleClick(e, i)
     })
 })
 
@@ -163,11 +164,10 @@ function changeMessage(){
 
 
 
-function handleClick(e){
+function handleClick(e, i){
     let index = e.target.id;
-    
- 
-
+    console.log(e.target.classList.contains('taken'))
+    console.log(i, e.target)
     if(board[index] !== null){
         return
     }
