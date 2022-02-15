@@ -37,7 +37,7 @@ div {
 
 
 button{
-   position: fixed;
+   margin-top: 10%;
    bottom: 8%;
    background-color: #74ec78;
    font-size: 30px;
@@ -55,7 +55,7 @@ button{
 #back{
     position: fixed;
     left: 1%;
-    margin:1%
+    margin: 2%
 }
 
 h1{
