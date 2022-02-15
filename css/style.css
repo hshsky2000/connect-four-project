@@ -23,6 +23,7 @@ section.board{
     padding: 1.5%;
     border: 3px solid rgb(70, 70, 73);
     border-radius: 12% 12% 0 0;
+    transition: 0.9s;
     
 }
 
@@ -39,10 +40,19 @@ div {
 button{
    margin-top: 10%;
    bottom: 8%;
-   background-color: #74ec78;
-   font-size: 30px;
+   font-size: 20px;
    cursor: pointer;
-  
+   
+   display: inline-block;
+   border-radius: 2em;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: 'Roboto', sans-serif;
+   color: #ffffff;
+   background-color: #4eb5f1;
+   text-align: center;
+   transition: all 0.9s;
+
 }
 
 #turn{
