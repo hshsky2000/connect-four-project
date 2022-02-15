@@ -38,6 +38,13 @@ var confettiElement = document.getElementById('my-canvas');
 var confettiSettings = { target: confettiElement };
 var confetti = new ConfettiGenerator(confettiSettings);
 // confetti.render();
+const sound= document.querySelector('.board')
+const moveSound= new Audio("audio/mixkit-small-hit-in-a-game-2072.wav")
+
+sound.addEventListener('click', function(e){
+    
+    moveSound.play()
+})
 /*----------------------------- Event Listeners -----------------------------*/
 
 circles.forEach(function(circle){
@@ -47,8 +54,8 @@ circles.forEach(function(circle){
 })
 
 newGame.addEventListener('click', function(){
-    confetti.clear();
     init()
+    confetti.clear();
     
 })
 
