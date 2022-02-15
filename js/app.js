@@ -38,7 +38,7 @@ var confettiElement = document.getElementById('my-canvas');
 var confettiSettings = { target: confettiElement };
 var confetti = new ConfettiGenerator(confettiSettings);
 
-const titleEl = document.querySelector('.item')
+
 
 
 
