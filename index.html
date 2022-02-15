@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/app.js"></script>
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+
     <title>Connect Four</title>
 </head>
 <body>
     <h1>Connect Four</h1>
     <h2 id="turn"></h2>
     <a id="back" href="http://127.0.0.1:5500/js/prepage.html">Back to Main</a>
-   
+    <canvas id="my-canvas"></canvas>
     <button id= "reset">New Game</button>
+    
     
 
     <section class="board">
@@ -52,14 +55,14 @@
         <div id="32" class="cl"></div>
         <div id="33" class="cl"></div>
         <div id="34" class="cl"></div>
-        <div id="35" class="cl" class="taken"></div>
-        <div id="36" class="cl" class="taken"></div>
-        <div id="37" class="cl" class="taken"></div>
-        <div id="38" class="cl" class="taken"></div>
-        <div id="39" class="cl" class="taken"></div>
-        <div id="40" class="cl" class="taken"></div>
-        <div id="41" class="cl" class="taken"></div>
+        <div id="35" class="cl taken"></div>
+        <div id="36" class="cl taken"></div>
+        <div id="37" class="cl taken"></div>
+        <div id="38" class="cl taken"></div>
+        <div id="39" class="cl taken"></div>
+        <div id="40" class="cl taken"></div>
+        <div id="41" class="cl taken"></div>
     </section>
-    
+    <canvas id="my-canvas"></canvas>
 </body>
 </html>

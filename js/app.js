@@ -33,6 +33,11 @@ let board, turn, winner
 let circles = document.querySelectorAll('.cl')
 let resultMessage = document.querySelector('#turn')
 let newGame = document.querySelector('#reset')
+
+var confettiElement = document.getElementById('my-canvas');
+var confettiSettings = { target: confettiElement };
+var confetti = new ConfettiGenerator(confettiSettings);
+// confetti.render();
 /*----------------------------- Event Listeners -----------------------------*/
 
 circles.forEach(function(circle){
@@ -42,13 +47,16 @@ circles.forEach(function(circle){
 })
 
 newGame.addEventListener('click', function(){
+    confetti.clear();
     init()
+    
 })
 
 
 /*-------------------------------- Functions --------------------------------*/
 
 init();
+
 
 function init(){
     board = [
@@ -57,7 +65,7 @@ function init(){
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
-        null, null, null, null, null, null, null
+        1, 1, 1, -1, 1, 1, 1
         
     ]
     
@@ -172,10 +180,12 @@ function getWinner(){
         if(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]] === -4){
             winner = -1;
             changeMessage();
+            confetti.render();
         }
         if(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]] ===4){
             winner = 1;
             changeMessage();
+            confetti.render();
         }
     })
     let tieGame = board.some(numb => numb === null)
