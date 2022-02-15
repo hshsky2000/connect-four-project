@@ -10,7 +10,6 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: white;
-    
 
 }
 
@@ -24,7 +23,7 @@ section.board{
     padding: 1.5%;
     border: 3px solid rgb(70, 70, 73);
     border-radius: 12% 12% 0 0;
-    ;
+    
 }
 
 div {
@@ -33,13 +32,13 @@ div {
     text-align: center;
     vertical-align: middle;
     border-radius: 50%;
-  
+    
 }
 
 
 button{
    position: fixed;
-   bottom: 1%;
+   bottom: 8%;
    background-color: #74ec78;
    font-size: 30px;
    cursor: pointer;
@@ -63,3 +62,7 @@ h1{
     color:rgb(19, 66, 153)
 }
 
+#my-canvas{
+    position: fixed;
+
+}
