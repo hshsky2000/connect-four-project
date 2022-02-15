@@ -73,7 +73,7 @@ function init(){
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
-        1, 1, 1, -1, 1, 1, 1
+        null, null, null, null, null, null, null
         
     ]
     
@@ -164,10 +164,16 @@ function changeMessage(){
 
 
 
-function handleClick(e, i){
+function handleClick(e){
     let index = e.target.id;
-    console.log(e.target.classList.contains('taken'))
-    console.log(i, e.target)
+    let ind = parseInt(index);
+    let slotBelow = ind + 7
+    if (index < 35 && circles[slotBelow].className === ''){
+        alert('not playable');
+        return;
+    }
+
+
     if(board[index] !== null){
         return
     }
