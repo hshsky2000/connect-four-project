@@ -37,7 +37,12 @@ let newGame = document.querySelector('#reset')
 var confettiElement = document.getElementById('my-canvas');
 var confettiSettings = { target: confettiElement };
 var confetti = new ConfettiGenerator(confettiSettings);
-// confetti.render();
+
+const titleEl = document.querySelector('.item')
+
+
+
+//------- sound cashed-------------------//
 const sound= document.querySelector('.cl')
 const moveSound= new Audio("audio/mixkit-small-hit-in-a-game-2072.wav")
 
@@ -68,6 +73,8 @@ init();
 
 
 function init(){
+    
+
     board = [
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
@@ -78,10 +85,10 @@ function init(){
         
     ]
     
-
+    
     turn = 1
     winner = null
-
+    
     render()
 
 }
