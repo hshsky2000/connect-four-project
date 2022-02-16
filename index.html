@@ -4,72 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/app.js"></script>
-    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Rowdies:wght@300&display=swap" rel="stylesheet">
 
-    <title>Connect Four</title>
+    <style>
+        body{
+            background-color: rgb(157, 213, 233);
+            display: flex;
+           /* align-items: center; */
+            justify-content: center;
+        }
+      
+        img{
+            /* margin-left: 30%; */
+            border-radius: 20%; 
+        }
+
+
+
+        #item{
+            display: inline-grid;
+            font-family: 'Rowdies', cursive;
+            font-size: 50px;
+            color: purple;
+        } 
+        a:link{
+            text-decoration: none;
+        }
+
+        /* *{
+    border: solid red;
+} */
+        
+    </style>
 </head>
 <body>
-    <h1>Connect Four</h1>
-    <h2 id="turn"></h2>
-    <a id="back" href="prepage.html">Back to Main</a>
-    
-    
-    
-    <canvas id="my-canvas"></canvas>
-    
-    <section class="board">
-        <div id="0" class="cl"></div>
-        <div id="1" class="cl"></div>
-        <div id="2" class="cl"></div>
-        <div id="3" class="cl"></div>
-        <div id="4" class="cl"></div>
-        <div id="5" class="cl"></div>
-        <div id="6" class="cl"></div>
-        <div id="7" class="cl"></div>
-        <div id="8" class="cl"></div>
-        <div id="9" class="cl"></div>
-        <div id="10" class="cl"></div>
-        <div id="11" class="cl"></div>
-        <div id="12" class="cl"></div>
-        <div id="13" class="cl"></div>
-        <div id="14" class="cl"></div>
-        <div id="15" class="cl"></div>
-        <div id="16" class="cl"></div>
-        <div id="17" class="cl"></div>
-        <div id="18" class="cl"></div>
-        <div id="19" class="cl"></div>
-        <div id="20" class="cl"></div>
-        <div id="21" class="cl"></div>
-        <div id="22" class="cl"></div>
-        <div id="23" class="cl"></div>
-        <div id="24" class="cl"></div>
-        <div id="25" class="cl"></div>
-        <div id="26" class="cl"></div>
-        <div id="27" class="cl"></div>
-        <div id="28" class="cl"></div>
-        <div id="29" class="cl"></div>
-        <div id="30" class="cl"></div>
-        <div id="31" class="cl"></div>
-        <div id="32" class="cl"></div>
-        <div id="33" class="cl"></div>
-        <div id="34" class="cl"></div>
-        <div id="35" class="cl taken"></div>
-        <div id="36" class="cl taken"></div>
-        <div id="37" class="cl taken"></div>
-        <div id="38" class="cl taken"></div>
-        <div id="39" class="cl taken"></div>
-        <div id="40" class="cl taken"></div>
-        <div id="41" class="cl taken"></div>
-    </section>
-    <form>
-        <button id= "reset">New Game</button>
-
-    </form>
+    <a id='item' href="mainpage.html"> Click to Play
+    <img id='image' src="https://www.kidinn.com/f/13803/138033278/hasbro-conecta-4.jpg">
+    </a>
 </body>
 </html>
