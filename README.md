@@ -4,7 +4,7 @@ Connect Four is a two-player connection board game, in which the players choose 
 
 https://modest-mestorf-9cc18e.netlify.app/index.html
 
-<img src ="/Users/ga/code/sei/projects/unit1/.env" alt="connect four game">
+![fresh loaded game](https://i.imgur.com/kVixn8P.png)
 
 HTML, CSS, JavaScript used
 
