@@ -38,9 +38,7 @@ var confettiElement = document.getElementById('my-canvas');
 var confettiSettings = { target: confettiElement };
 var confetti = new ConfettiGenerator(confettiSettings);
 
-const tokenSound = new Audio('./audio/tokenSound.wav')
-
-
+const tokenSound = new Audio('../js/audio/token-sound.mp3')
 
 
 
