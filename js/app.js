@@ -38,7 +38,7 @@ var confettiElement = document.getElementById('my-canvas');
 var confettiSettings = { target: confettiElement };
 var confetti = new ConfettiGenerator(confettiSettings);
 
-const tokenSound = new Audio('../js/audio/token-sound.mp3')
+const tokenSound = new Audio('./js/audio/token-sound.mp3')
 
 
 
@@ -164,6 +164,7 @@ function handleClick(e){
     }
     tokenSound.volume = .5
     tokenSound.play()
+    console.log('play', tokenSound)
     board[index] = turn
     turn = turn * -1
     getWinner()
