@@ -38,12 +38,11 @@ var confettiElement = document.getElementById('my-canvas');
 var confettiSettings = { target: confettiElement };
 var confetti = new ConfettiGenerator(confettiSettings);
 
+const tokenSound = new Audio('./audio/tokenSound.wav')
 
 
 
 
-//------- sound cashed-------------------//
-const sound= document.querySelector('.cl')
 
 
 
@@ -87,6 +86,7 @@ function init(){
     winner = null
     
     render()
+   
 
 }
 
@@ -115,6 +115,8 @@ function render(){
         circles[index].classList = slotClass
     })
     changeMessage()
+    
+   
 }
 
 
@@ -162,6 +164,8 @@ function handleClick(e){
     if(winner !== null){
         return
     }
+    tokenSound.volume = .5
+    tokenSound.play()
     board[index] = turn
     turn = turn * -1
     getWinner()
@@ -189,3 +193,5 @@ function getWinner(){
         changeMessage();
     }
 }
+
+
