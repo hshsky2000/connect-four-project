@@ -44,12 +44,9 @@ var confetti = new ConfettiGenerator(confettiSettings);
 
 //------- sound cashed-------------------//
 const sound= document.querySelector('.cl')
-const moveSound= new Audio("audio/mixkit-small-hit-in-a-game-2072.wav")
 
-sound.addEventListener('click', function(e){
-    moveSound.volume = .10
-    moveSound.play()
-})
+
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 circles.forEach(function(circle, i){
@@ -120,30 +117,7 @@ function render(){
     changeMessage()
 }
 
-//------------------gravity function---------------------------//
-//  for(let i= 0; i< circles.length ;i++){
-//      circles[i].onclick = () => {
-//          if (circles[i + 7].classList.contains('taken')) {
-//              if (turn === 1) {
-//                  circles[i].classList.add("taken")
-                //  circles[i].classList.add("player-one")
-                //  currentPlayer = -1
-                //  resultMessage.innerHTML = currentPlayer
-//              } else if (turn === -1){
-                // circles[i].classList.add("taken")
-                // circles[i].classList.add("player-two")
-                // currentPlayer = 1
-                // resultMessage.innerHTML = currentPlayer
-//              }
-//          }else alert('cant go here')
-         
-        
-//      }
-//  }
 
-
-
-//---------------------end of gravity function--------------------------//
 
 function changeMessage(){
     if (winner === null) {
