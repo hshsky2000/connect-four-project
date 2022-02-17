@@ -16,3 +16,8 @@ HTML, CSS, JavaScript used
 ### Link to game
 
 https://modest-mestorf-9cc18e.netlify.app/index.html
+
+### Icdbox items
+
+ Add computer player feature
+ Add more games index and player can choose the game
