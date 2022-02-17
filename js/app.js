@@ -123,12 +123,12 @@ function changeMessage(){
     if (winner === null) {
          
         if (turn === 1) {
-            resultMessage.textContent = "Player Red Move"
+            resultMessage.textContent = "PLAYER 1's TURN"
             resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
         }
            
         if (turn === -1){
-             resultMessage.textContent = "Player Yellow Move"
+             resultMessage.textContent = "PLAYER 2's TURN"
              resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
             }
     }else if (winner === 'T'){

@@ -23,7 +23,7 @@ section.board{
     padding: 1.5%;
     border: 3px solid rgb(70, 70, 73);
     border-radius: 12% 12% 0 0;
-  
+    transition: all 0.9s;
     
 }
 
@@ -40,10 +40,9 @@ div {
 button{
    margin-top: 10%;
    bottom: 8%;
-   font-size: 30px;
+   font-size: 50px;
    cursor: pointer;
-   
-   
+   border-style: none;
    display: inline-block;
    border-radius: 2em;
    box-sizing: border-box;
@@ -52,7 +51,7 @@ button{
    color: #ffffff;
    background-color: #4eb5f1;
    text-align: center;
-   transition: all 0.9s;
+   
 
 }
 
@@ -60,7 +59,8 @@ button{
   color: white;
   padding: 1%;
   margin: 1%;
-  border-radius: 20%;
+  border-radius: 50%;
+  padding: 3%;
 }
 
 #back{
