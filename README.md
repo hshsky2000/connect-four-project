@@ -1,6 +1,7 @@
-Connect Four
+# Connect Four
 
-About the game...
+About the game
+
 Connect Four is a two-player connection board game, in which the players choose a color and then take turns dropping colored tokens into a seven-column, six-row vertically suspended grid. 
 
 Game screen-shots
