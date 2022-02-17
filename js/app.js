@@ -38,10 +38,12 @@ const confettiElement = document.getElementById('my-canvas');
 const confettiSettings = { target: confettiElement };
 const confetti = new ConfettiGenerator(confettiSettings);
 
+const prepageS = document.querySelector('#index-item')
+
 
 const tokenSound = new Audio('./js/audio/token-sound.mp3')
 const token2 = new Audio('./js/audio/token2.mp3')
-const prepagesound = new Audio('./js/audio/prepage-sound.mp3')
+const prepageSound = new Audio('./js/audio/prepage-sound.mp3')
 
 
 
@@ -60,12 +62,10 @@ newGame.addEventListener('click', function(){
     init();
     confetti.clear()
     
+    
 })
 
-prepagesound.addEventListener('click', function() {
-    prepagesound.volume = .5
-    prepagesound.play()
-})
+
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -160,7 +160,7 @@ function handleClick(e){
     let ind = parseInt(index);
     let slotBelow = ind + 7
     if (index < 35 && circles[slotBelow].className === ''){
-        alert('Select ');
+        alert('WRONG CIRCLE');
         return;
     }
 
