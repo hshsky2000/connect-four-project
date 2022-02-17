@@ -89,3 +89,26 @@ h1{
     position: fixed;
     z-index: -1;
 }
+/* index page css */
+#index-body{
+    background-color: rgb(157, 213, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#index-image{
+    /* margin-left: 30%; */
+    border-radius: 20%; 
+}
+
+
+
+#index-item{
+    display: grid;
+    font-family: 'Rowdies', cursive;
+    font-size: 50px;
+    color: purple;
+    justify-content: center;
+    text-decoration: none;
+} 
