@@ -26,7 +26,6 @@ const winningCombo = [
     [11, 17, 23, 29] 
     ]; 
 
-
 /*---------------------------- Variables (state) ----------------------------*/
 let board, turn, winner
 /*------------------------ Cached Element References ------------------------*/
@@ -38,14 +37,9 @@ const confettiElement = document.getElementById('my-canvas');
 const confettiSettings = { target: confettiElement };
 const confetti = new ConfettiGenerator(confettiSettings);
 
-
 const tokenSound = new Audio('./js/audio/token-sound.mp3')
 const token2 = new Audio('./js/audio/token2.mp3')
 const prepageSound = new Audio('./js/audio/prepage-sound.mp3')
-
-
-
-
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -62,17 +56,12 @@ newGame.addEventListener('click', function(){
     
 })
 
-
-
 /*-------------------------------- Functions --------------------------------*/
 
 init();
 
-
-
 function init(){
     
-
     board = [
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
@@ -80,22 +69,19 @@ function init(){
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null
-        
     ]
-    
     
     turn = 1
     winner = null
     
     render()
-    
 
 }
 
 function render(){
-    board.forEach(function(circle, index){
 
-        
+        board.forEach(function(circle, index){
+
         let circleColor
         let slotClass
         
@@ -116,14 +102,13 @@ function render(){
         circles[index].style.backgroundColor = circleColor
         circles[index].classList = slotClass
     })
+
     changeMessage()
     
-   
 }
 
-
-
 function changeMessage(){
+
     if (winner === null) {
          
         if (turn === 1) {
@@ -131,31 +116,26 @@ function changeMessage(){
             resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
             
         }
-           
         if (turn === -1){
              resultMessage.textContent = "PLAYER YELL'S TURN"
              resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
              
             }
-    }else if (winner === 'T'){
-        resultMessage.textContent = 'Tie Game! Reset Button To Play Again'
-    } else if (winner === 1){
-        resultMessage.textContent = 'WINNER!!!'
-        resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
-        prepageSound.volume =0.5
-        prepageSound.play()
+        }else if (winner === 'T'){
+            resultMessage.textContent = 'Tie Game! Reset Button To Play Again'
+        } else if (winner === 1){
+            resultMessage.textContent = 'WINNER!!!'
+            resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
+            prepageSound.volume =0.5
+            prepageSound.play()
         
-    }else if ( winner === -1){
-        resultMessage.textContent = 'WINNER!!!'
-        resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
-        prepageSound.volume =0.5
-        prepageSound.play()
+        }else if ( winner === -1){
+            resultMessage.textContent = 'WINNER!!!'
+            resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
+            prepageSound.volume =0.5
+            prepageSound.play()
     }
 }
-
-
-
-
 
 function handleClick(e){
     let index = e.target.id;
@@ -165,7 +145,6 @@ function handleClick(e){
         alert('Wrong');
         return;
     }
-
 
     if(board[index] !== null){
         return
@@ -197,6 +176,7 @@ function getWinner(){
             confetti.render();
         }
     })
+    
     let tieGame = board.some(numb => numb === null)
     if (tieGame === false) {
         winner = 'T'
