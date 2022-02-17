@@ -10,14 +10,18 @@ Connect Four is a two-player connection board game, in which the players choose 
 * Only one token is played at a time.
 * The game ends when there is a 4-in-a-row or a stalemate.
 
-** [Link to game](https://modest-mestorf-9cc18e.netlify.app/index.html)
+# Click[here](https://modest-mestorf-9cc18e.netlify.app/index.html) to play game
 
+* First page
 ![pre-page](https://i.imgur.com/bjzGapO.png)
+* Game page
 ![fresh loaded game](https://i.imgur.com/1FuOlEw.png)
 
-### Technologies used
-
-* HTML, CSS, JavaScript used
+### Technologies
+* HTML
+* CSS
+* JavaScript
+* 
 
 
 ### Icdbox items
