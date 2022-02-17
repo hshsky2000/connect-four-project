@@ -4,8 +4,12 @@
 
 Connect Four is a two-player connection board game, in which the players choose a color and then take turns dropping colored tokens into a seven-column, six-row vertically suspended grid. 
 
+### [Link to game](https://modest-mestorf-9cc18e.netlify.app/index.html)
 
-![prepage](https://i.imgur.com/bjzGapO.png)
+
+
+
+![pre-page](https://i.imgur.com/bjzGapO.png)
 ![fresh loaded game](https://i.imgur.com/64aipKe.png)
 
 
@@ -13,9 +17,6 @@ Connect Four is a two-player connection board game, in which the players choose 
 
 * HTML, CSS, JavaScript used
 
-### Link to game
-
-https://modest-mestorf-9cc18e.netlify.app/index.html
 
 ### Icdbox items
 
