@@ -39,8 +39,6 @@ const confettiSettings = { target: confettiElement };
 const confetti = new ConfettiGenerator(confettiSettings);
 
 
-
-
 const tokenSound = new Audio('./js/audio/token-sound.mp3')
 const token2 = new Audio('./js/audio/token2.mp3')
 const prepageSound = new Audio('./js/audio/prepage-sound.mp3')
@@ -61,7 +59,6 @@ circles.forEach(function(circle, i){
 newGame.addEventListener('click', function(){
     init();
     confetti.clear()
-    
     
 })
 
