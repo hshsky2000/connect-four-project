@@ -34,9 +34,10 @@ let circles = document.querySelectorAll('.cl')
 let resultMessage = document.querySelector('#turn')
 let newGame = document.querySelector('#reset')
 
-var confettiElement = document.getElementById('my-canvas');
-var confettiSettings = { target: confettiElement };
-var confetti = new ConfettiGenerator(confettiSettings);
+const confettiElement = document.getElementById('my-canvas');
+const confettiSettings = { target: confettiElement };
+const confetti = new ConfettiGenerator(confettiSettings);
+
 
 const tokenSound = new Audio('./js/audio/token-sound.mp3')
 const token2 = new Audio('./js/audio/token2.mp3')
@@ -62,7 +63,8 @@ newGame.addEventListener('click', function(){
 })
 
 prepagesound.addEventListener('click', function() {
-
+    prepagesound.volume = .5
+    prepagesound.play()
 })
 
 /*-------------------------------- Functions --------------------------------*/
@@ -130,15 +132,13 @@ function changeMessage(){
         if (turn === 1) {
             resultMessage.textContent = "PLAYER RED'S TURN"
             resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
-            tokenSound.volume = .5
-            tokenSound.play()
+            
         }
            
         if (turn === -1){
              resultMessage.textContent = "PLAYER YELL'S TURN"
              resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
-             token2.volume = .5
-             token2.play()
+             
             }
     }else if (winner === 'T'){
         resultMessage.textContent = 'Tie Game! Reset Button To Play Again'
@@ -171,8 +171,9 @@ function handleClick(e){
     if(winner !== null){
         return
     }
-    
-   
+
+    tokenSound.volume = .5
+    tokenSound.play()
     board[index] = turn
     turn = turn * -1
     getWinner()
