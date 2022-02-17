@@ -11,7 +11,7 @@ Connect Four is a two-player connection board game, in which the players choose 
 
 ### Technologies used
 
-*HTML, CSS, JavaScript used
+* HTML, CSS, JavaScript used
 
 ### Link to game
 
@@ -19,6 +19,6 @@ https://modest-mestorf-9cc18e.netlify.app/index.html
 
 ### Icdbox items
 
- *Add computer player feature
+ * Add computer player feature
 
- *Add more games index and player can choose the game
+ * Add more games index and player can choose the game
