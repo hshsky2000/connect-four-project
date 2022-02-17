@@ -16,15 +16,18 @@ Connect Four is a two-player connection board game, in which the players choose 
 ![pre-page](https://i.imgur.com/bjzGapO.png)
 * Game page
 ![fresh loaded game](https://i.imgur.com/1FuOlEw.png)
+* Wire-frame
+![wire-frame](https://i.imgur.com/jmUafxF.png)
 
 ### Technologies
 * HTML
 * CSS
 * JavaScript
-* 
+* canvas-confetti
+* Netlify
 
 
-### Icdbox items
+### Next steps
 
  * Add computer player feature
 
