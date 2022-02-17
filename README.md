@@ -29,6 +29,6 @@ Wire-frame
 
 ### Next steps
 
- * Add computer player feature
+ * Computer player feature
 
- * Add more games index and player can choose the game
+ * Add multiple games in first page and user can select what they want to play
