@@ -38,7 +38,7 @@ const confettiElement = document.getElementById('my-canvas');
 const confettiSettings = { target: confettiElement };
 const confetti = new ConfettiGenerator(confettiSettings);
 
-const prepageS = document.querySelector('#index-item')
+
 
 
 const tokenSound = new Audio('./js/audio/token-sound.mp3')
@@ -61,6 +61,7 @@ circles.forEach(function(circle, i){
 newGame.addEventListener('click', function(){
     init();
     confetti.clear()
+    
     
 })
 
@@ -90,7 +91,7 @@ function init(){
     winner = null
     
     render()
-   
+    
 
 }
 
@@ -144,9 +145,14 @@ function changeMessage(){
     } else if (winner === 1){
         resultMessage.textContent = 'WINNER!!!'
         resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
+        prepageSound.volume =0.5
+        prepageSound.play()
+        
     }else if ( winner === -1){
         resultMessage.textContent = 'WINNER!!!'
         resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
+        prepageSound.volume =0.5
+        prepageSound.play()
     }
 }
 
