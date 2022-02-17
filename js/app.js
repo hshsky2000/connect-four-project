@@ -123,21 +123,21 @@ function changeMessage(){
     if (winner === null) {
          
         if (turn === 1) {
-            resultMessage.textContent = "PLAYER 1's TURN"
+            resultMessage.textContent = "PLAYER RED'S TURN"
             resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
         }
            
         if (turn === -1){
-             resultMessage.textContent = "PLAYER 2's TURN"
+             resultMessage.textContent = "PLAYER YELL'S TURN"
              resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
             }
     }else if (winner === 'T'){
-        resultMessage.textContent = 'Tie Game! "Reset Button To Play Again'
+        resultMessage.textContent = 'Tie Game! Reset Button To Play Again'
     } else if (winner === 1){
-        resultMessage.textContent = 'Player Red Has Won the Game'
+        resultMessage.textContent = 'WINNER!!!'
         resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
     }else if ( winner === -1){
-        resultMessage.textContent = 'Player Yellow has Won the Game'
+        resultMessage.textContent = 'WINNER!!!'
         resultMessage.style.backgroundColor = 'rgb(228, 228, 78)'
     }
 }
