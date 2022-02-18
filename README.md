@@ -2,11 +2,11 @@
 
 ## How to play the game
 
-* Two-player board game
-* choose a color and then take turns dropping colored tokens into a seven-column, six-row vertically suspended grid.
-* Only one token is played at a time.
-* Players must connect 4 of the same colored tokens in a row to win.
-* The game ends when there is a 4-in-a-row or draw when there is running out of space.
+* Each of the two players chooses a color. 
+* Each player takes turns dropping a token into the grid.
+* Each player must connect 4 of the same colored tokens in a row to win.
+* The game ends when there is a 4-in-a-row.
+* It's a tie when the grid is full.
 
 ## Click [here](https://modest-mestorf-9cc18e.netlify.app/index.html) to play Connect Four
 

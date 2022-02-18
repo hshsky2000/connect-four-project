@@ -142,7 +142,7 @@ function handleClick(e){
     let ind = parseInt(index);
     let slotBelow = ind + 7
     if (index < 35 && circles[slotBelow].className === ''){
-        alert('Wrong');
+        alert("NOPE!");
         return;
     }
 
