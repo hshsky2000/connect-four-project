@@ -8,7 +8,7 @@
 * Players must connect 4 of the same colored tokens in a row to win.
 * The game ends when there is a 4-in-a-row or draw when there is running out of space.
 
-## Click [here](https://modest-mestorf-9cc18e.netlify.app/index.html) to play game
+## Click [here](https://modest-mestorf-9cc18e.netlify.app/index.html) to play Connect Four
 
 First page
 ![pre-page](https://i.imgur.com/bjzGapO.png)
@@ -29,4 +29,4 @@ Wire-frame
 
  * Computer player feature
 
- * Add multiple games in first page and user can select what they want to play
+ * Add multiple games in first page and users can select what they want to play
