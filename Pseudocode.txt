@@ -12,14 +12,14 @@ pseudo code
 4. create initialize function to initialize the variables
     -42 circles nulls represent empty circles
     -42 elements map to each circles.
-    -initialize whos turn to 1
+    -initialize who's turn to 1
     -initialize winner variable to null
 
-5. create render function excute when the page loading
+5. create render function execute when the page loading
     -loop over the circles array
-    -render whos turn
+    -render who's turn
     -render reset button
-    -winner is equel to T for tie
+    -winner is equal to T for tie
 
 6. create array function fill up row from the bottom.
     

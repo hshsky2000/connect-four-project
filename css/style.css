@@ -30,7 +30,6 @@ div {
     border-radius: 50%;
 }
 
-
 button{
    margin-top: 10%;
    bottom: 8%;
@@ -147,12 +146,12 @@ h1{
 
 #index-image{
     margin-top: 1%;
-    margin-left: 5%;
+    margin-left: 15%;
     border-radius: 20%; 
     display: grid;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width:70%;
 }
 
 #index-item{
