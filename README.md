@@ -1,14 +1,12 @@
 # Connect Four
 
-## About the game
-
-Connect Four is a two-player connection board game, in which the players choose a color and then take turns dropping colored tokens into a seven-column, six-row vertically suspended grid. 
-
 ## How to play the game
 
-* Players must connect 4 of the same colored discs in a row to win.
+* Two-player board game
+* choose a color and then take turns dropping colored tokens into a seven-column, six-row vertically suspended grid.
 * Only one token is played at a time.
-* The game ends when there is a 4-in-a-row or a stalemate.
+* Players must connect 4 of the same colored tokens in a row to win.
+* The game ends when there is a 4-in-a-row or draw when there is running out of space.
 
 ## Click [here](https://modest-mestorf-9cc18e.netlify.app/index.html) to play game
 
