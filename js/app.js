@@ -44,7 +44,6 @@ const prepageSound = new Audio('./js/audio/prepage-sound.mp3')
 /*----------------------------- Event Listeners -----------------------------*/
 
 circles.forEach(function(circle, i){
-    console.log(i)
     circle.addEventListener('click', function(e, i){
         handleClick(e, i)
     })
@@ -122,7 +121,7 @@ function changeMessage(){
              
             }
         }else if (winner === 'T'){
-            resultMessage.textContent = 'Tie Game! Reset Button To Play Again'
+            resultMessage.textContent = "It's a Tie! Reset to Play Again"
         } else if (winner === 1){
             resultMessage.textContent = 'WINNER!!!'
             resultMessage.style.backgroundColor = 'rgb(228, 114, 114)'
@@ -158,7 +157,6 @@ function handleClick(e){
     board[index] = turn
     turn = turn * -1
     getWinner()
-
 }
 
 function getWinner(){
